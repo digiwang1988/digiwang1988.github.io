@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>匿名上位机使用介绍系列3--波形显示 | 匿名科创 ANO TC | 做自己，发现兴趣，追随兴趣，分享兴趣 QQ Club：190169595</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="匿名上位机讲解">
+    <meta name="description" content="&amp;emsp;&amp;emsp;波形显示可以说是上位机的功能重点，是各种调试、数据分析的有力助手，下面对匿名上位机的波形显示功能做一个详细使用介绍。  主界面                                                                                             主界面              &amp;emsp;&amp;emsp;主界面">
+<meta name="keywords" content="匿名上位机讲解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="匿名上位机使用介绍系列3--波形显示">
+<meta property="og:url" content="http://www.digiwang.com/jiaochengswjwave.html/index.html">
+<meta property="og:site_name" content="匿名科创 ANO TC">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;波形显示可以说是上位机的功能重点，是各种调试、数据分析的有力助手，下面对匿名上位机的波形显示功能做一个详细使用介绍。  主界面                                                                                             主界面              &amp;emsp;&amp;emsp;主界面">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.digiwang.com/jiaochengswjwave.html/波形显示.png">
+<meta property="og:image" content="http://www.digiwang.com/jiaochengswjwave.html/波形显示num.png">
+<meta property="og:image" content="http://www.digiwang.com/jiaochengswjwave.html/波形显示set2.png">
+<meta property="og:image" content="http://www.digiwang.com/jiaochengswjwave.html/波形显示set.png">
+<meta property="og:image" content="http://www.digiwang.com/jiaochengswjwave.html/波形显示-矩形.png">
+<meta property="og:image" content="http://www.digiwang.com/jiaochengswjwave.html/波形显示-斜线.png">
+<meta property="og:updated_time" content="2018-11-04T10:52:21.214Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="匿名上位机使用介绍系列3--波形显示">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;波形显示可以说是上位机的功能重点，是各种调试、数据分析的有力助手，下面对匿名上位机的波形显示功能做一个详细使用介绍。  主界面                                                                                             主界面              &amp;emsp;&amp;emsp;主界面">
+<meta name="twitter:image" content="http://www.digiwang.com/jiaochengswjwave.html/波形显示.png">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/digiwang.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">茶不思</h5>
+          <a href="mailto:undefined" class="mail">
+        </a></hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories">
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://anotc.taobao.com" target="_blank">
+                <i class="icon icon-lg icon-cart-plus"></i>
+                匿名淘宝
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.anotc.com" target="_blank">
+                <i class="icon icon-lg icon-star"></i>
+                匿名官网
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">匿名上位机使用介绍系列3--波形显示</div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">匿名上位机使用介绍系列3--波形显示</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-11-03T16:12:16.000Z" itemprop="datePublished" class="page-time">
+  2018-11-04
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/匿名上位机讲解/">匿名上位机讲解</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#主界面"><span class="post-toc-number">1.</span> <span class="post-toc-text">主界面</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#波形操作"><span class="post-toc-number">2.</span> <span class="post-toc-text">波形操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#缩放"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">缩放</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#移动"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">移动</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数值显示"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">数值显示</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#快速设置"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">快速设置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#波形设置"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">波形设置</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-jiaochengswjwave" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">匿名上位机使用介绍系列3--波形显示</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-11-04 00:12:16" datetime="2018-11-03T16:12:16.000Z" itemprop="datePublished">2018-11-04</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/匿名上位机讲解/">匿名上位机讲解</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>&emsp;&emsp;波形显示可以说是上位机的功能重点，是各种调试、数据分析的有力助手，下面对匿名上位机的波形显示功能做一个详细使用介绍。</p>
+<hr>
+<h2 id="主界面"><a href="#主界面" class="headerlink" title="主界面"></a>主界面</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/jiaochengswjwave.html/波形显示.png" alt="主界面" title="">
+                </div>
+                <div class="image-caption">主界面</div>
+            </figure>
+<p>&emsp;&emsp;主界面左侧为功能区，顶部有功能按钮，稍后做详细说明。中间部分为波形名称、颜色、数值显示。最下方为波形清空按钮。功能区和波形区之间有一蓝色竖条，点击该处即可实现功能区的隐藏与显示。</p>
+<ul>
+<li>保存<br>将波形以文件形式保存，注意保存的文件为上位机专用文件，只能用上位机的读取功能进行读取。</li>
+<li>读取<br>读取之前保存的波形文件。</li>
+<li>全显<br>一屏内显示所有波形数据。</li>
+<li>全屏<br>全屏显示波形区域。</li>
+<li>设置<br>显示波形设置界面，见下文波形设置界面。</li>
+<li>X轴点数<br>表示一页波形X轴点数，数值越大，一页波形显示的点越多。</li>
+</ul>
+<p>&emsp;&emsp;主界面右边就是波形显示区域了。波形纵坐标为自动坐标，根据波形数据y值的最大值、最小值自动适应。波形横坐标单位为帧数，每增加一次波形数据，x轴加1.</p>
+<hr>
+<h2 id="波形操作"><a href="#波形操作" class="headerlink" title="波形操作"></a>波形操作</h2><h3 id="缩放"><a href="#缩放" class="headerlink" title="缩放"></a>缩放</h3><p>&emsp;&emsp;在波形区域，按住鼠标左键，向右下拖动，会出现一个矩形框，框住想要方法的波形区域，松开鼠标左键，即可实现波形的放大。同样，按住鼠标左键，向左上方拖动，可以将放大的波形还原显示。注意鼠标左键的拖动方向，右下、右上为放大，左上、左下为还原。</p>
+<h3 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h3><p>&emsp;&emsp;在波形区域按住鼠标右键，向不同方向移动鼠标即可实现波形的移动。</p>
+<h3 id="数值显示"><a href="#数值显示" class="headerlink" title="数值显示"></a>数值显示</h3><p>&emsp;&emsp;按住Ctrl键，使用鼠标左键点击波形，即可切换该波形的数值显示与隐藏，数值显示如下图：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/jiaochengswjwave.html/波形显示num.png" alt="数值显示" title="">
+                </div>
+                <div class="image-caption">数值显示</div>
+            </figure></p>
+<h3 id="快速设置"><a href="#快速设置" class="headerlink" title="快速设置"></a>快速设置</h3><p>&emsp;&emsp;鼠标右键点击左侧功能区域的波形名称，即可对该波形进行快速设置，如下图，可以对波形颜色、缩放倍数、数据源进行快速配置。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/jiaochengswjwave.html/波形显示set2.png" alt="快速设置" title="">
+                </div>
+                <div class="image-caption">快速设置</div>
+            </figure></p>
+<h3 id="波形设置"><a href="#波形设置" class="headerlink" title="波形设置"></a>波形设置</h3><p>&emsp;&emsp;点击左侧功能区上方的设置按钮，可以打开波形功能设置界面，如下图，可以对20条波形的颜色、缩放、数据源以及其他功能进行配置。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/jiaochengswjwave.html/波形显示set.png" alt="波形设置" title="">
+                </div>
+                <div class="image-caption">波形设置</div>
+            </figure></p>
+<ul>
+<li>绘制所有点<br>绘制每一条波形的所有数据点，如果取消勾选，当一页显示的数据过多时，上位机会自动隐藏部分数据点（不影响数据观察，只会在每页x轴点数过高时起作用。比如显示器横向分辨率1080，但是一页x轴设置的是1500点，肯定有部分点无法画出，如果取消勾选本功能，即可忽略隐藏的点，加快波形绘制速度。为了使用简单，默认勾选本功能，性能较好的电脑即使绘制所有点也可以保证1000hz以上的绘制速度。）</li>
+<li>绘制坐标线<br>控制波形区域坐标线的显示与隐藏。</li>
+<li>飞控基本波形<br>将20条波形快速切换为默认的飞控数据。</li>
+<li>用户数据波形<br>将20条波形快速切换为1到20号数据容器。</li>
+<li>矩形波<br>两个相邻的波形点之间，直角线条连接，便于数据分析，如下图（推荐使用矩形波）<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/jiaochengswjwave.html/波形显示-矩形.png" alt="矩形波" title="">
+                </div>
+                <div class="image-caption">矩形波</div>
+            </figure></li>
+<li>斜线波<br>两个相邻的波形点之间，斜线直接连接，波形看起来较平滑，如下图：<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/jiaochengswjwave.html/波形显示-斜线.png" alt="矩形波" title="">
+                </div>
+                <div class="image-caption">矩形波</div>
+            </figure>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-11-04T10:52:21.214Z" itemprop="dateUpdated">2018-11-04 18:52:21</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://www.digiwang.com">
+            <img src="/img/digiwang.jpg" alt="茶不思">
+            茶不思
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/匿名上位机讲解/">匿名上位机讲解</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.digiwang.com/jiaochengswjwave.html/&title=《匿名上位机使用介绍系列3--波形显示》 — 匿名科创 ANO TC&pic=http://www.digiwang.com/img/digiwang.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.digiwang.com/jiaochengswjwave.html/&title=《匿名上位机使用介绍系列3--波形显示》 — 匿名科创 ANO TC&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.digiwang.com/jiaochengswjwave.html/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《匿名上位机使用介绍系列3--波形显示》 — 匿名科创 ANO TC&url=http://www.digiwang.com/jiaochengswjwave.html/&via=http://www.digiwang.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.digiwang.com/jiaochengswjwave.html/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/jiaochengswjrx2.html/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">匿名上位机使用介绍系列2--高级收码</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/jiaochengswjzongti.html/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">匿名上位机使用介绍系列1--总体介绍</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "tpFylRNtR7NVLVIhmxhUMfjL-gzGzoHsz",
+            appKey: "0vL8AmdoGyPIqXrFSUAKdSev",
+            avatar: "mm",
+            placeholder: "说点什么吧",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "5"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>茶不思 &copy; 2012 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.digiwang.com/jiaochengswjwave.html/&title=《匿名上位机使用介绍系列3--波形显示》 — 匿名科创 ANO TC&pic=http://www.digiwang.com/img/digiwang.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.digiwang.com/jiaochengswjwave.html/&title=《匿名上位机使用介绍系列3--波形显示》 — 匿名科创 ANO TC&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.digiwang.com/jiaochengswjwave.html/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《匿名上位机使用介绍系列3--波形显示》 — 匿名科创 ANO TC&url=http://www.digiwang.com/jiaochengswjwave.html/&via=http://www.digiwang.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.digiwang.com/jiaochengswjwave.html/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://www.digiwang.com/jiaochengswjwave.html/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '匿名科创';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '匿名科创';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
