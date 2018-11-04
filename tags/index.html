@@ -25,7 +25,7 @@
 <meta property="og:title" content="标签">
 <meta property="og:url" content="http://yoursite.com/tags/index.html">
 <meta property="og:site_name" content="茶不思的博客">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-11-03T12:58:25.806Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="标签">
@@ -120,7 +120,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -146,14 +146,18 @@
 <div class="tabs-bar container">
     <nav class="tags-list">
         <a href="/tags" style="-webkit-order:-1;order:-1" class="tags-list-item waves-effect waves-button waves-light
-             active">All</a>
+             active">全部</a>
         
 
-            <a href="/tags/test/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">test</a>
+            <a href="/tags/匿名上位机讲解/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">匿名上位机讲解</a>
 
         
 
-            <a href="/tags/first/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light">first</a>
+            <a href="/tags/test/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light">test</a>
+
+        
+
+            <a href="/tags/first/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">first</a>
 
         
     </nav>
@@ -169,6 +173,45 @@
 
 <div class="container body-wrap fade">
     
+
+            <h3 class="archive-separator" id="tag-匿名上位机讲解">匿名上位机讲解</h3>
+
+            <div class="waterfall">
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2018-11-04 00:12:16" datetime="2018-11-03T16:12:16.000Z" itemprop="datePublished">2018-11-04</time>
+
+      
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/11/04/SWJJJ-wave/">匿名上位机使用介绍系列--飞控设置</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/匿名上位机讲解/">匿名上位机讲解</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+            </div>
+            
 
             <h3 class="archive-separator" id="tag-test">test</h3>
 
@@ -297,7 +340,7 @@
 
         <p>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
@@ -404,10 +447,10 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '死鬼去哪里了！';
+            document.title = '匿名科创';
             clearTimeout(titleTime);
         } else {
-            document.title = '(つェ⊂)咦!又好了!';
+            document.title = '匿名科创';
             titleTime = setTimeout(function() {
                 document.title = OriginTitile;
             },2000);
