@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>匿名数传使用方法分享 | 匿名科创 ANO TC | 做自己，发现兴趣，追随兴趣，分享兴趣 QQ Club：190169595</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="匿名数传">
+    <meta name="description" content="欢迎使用匿名数传模块大家调试各种设备时，一般用什么方式呢？相比答案大多是上位机+串口的方式。如果您还在使用usb转串口芯片然后连接单片机串口这样的方法，就必须拖一根串口线在下位机模块和电脑之间，十分不便。匿名数传，就是为了解决这样的痛点，将有线变无线，使调试过程更加惬意和方便。 匿名数传的特点 简单 ，您拿到匿名数传后，只需要通过模块usb接口连接电脑，进行简单配置后，即可使用； 高速 ，匿名数传">
+<meta name="keywords" content="匿名数传">
+<meta property="og:type" content="article">
+<meta property="og:title" content="匿名数传使用方法分享">
+<meta property="og:url" content="http://www.digiwang.com/jiaochengshuchuan.html/index.html">
+<meta property="og:site_name" content="匿名科创 ANO TC">
+<meta property="og:description" content="欢迎使用匿名数传模块大家调试各种设备时，一般用什么方式呢？相比答案大多是上位机+串口的方式。如果您还在使用usb转串口芯片然后连接单片机串口这样的方法，就必须拖一根串口线在下位机模块和电脑之间，十分不便。匿名数传，就是为了解决这样的痛点，将有线变无线，使调试过程更加惬意和方便。 匿名数传的特点 简单 ，您拿到匿名数传后，只需要通过模块usb接口连接电脑，进行简单配置后，即可使用； 高速 ，匿名数传">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.digiwang.com/jiaochengshuchuan.html/模块正面.jpg">
+<meta property="og:image" content="http://www.digiwang.com/jiaochengshuchuan.html/模块背面.jpg">
+<meta property="og:image" content="http://www.digiwang.com/jiaochengshuchuan.html/主界面.png">
+<meta property="og:image" content="http://www.digiwang.com/jiaochengshuchuan.html/配置界面.png">
+<meta property="og:updated_time" content="2018-11-11T09:35:10.490Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="匿名数传使用方法分享">
+<meta name="twitter:description" content="欢迎使用匿名数传模块大家调试各种设备时，一般用什么方式呢？相比答案大多是上位机+串口的方式。如果您还在使用usb转串口芯片然后连接单片机串口这样的方法，就必须拖一根串口线在下位机模块和电脑之间，十分不便。匿名数传，就是为了解决这样的痛点，将有线变无线，使调试过程更加惬意和方便。 匿名数传的特点 简单 ，您拿到匿名数传后，只需要通过模块usb接口连接电脑，进行简单配置后，即可使用； 高速 ，匿名数传">
+<meta name="twitter:image" content="http://www.digiwang.com/jiaochengshuchuan.html/模块正面.jpg">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/digiwang.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">茶不思</h5>
+          <a href="mailto:undefined" class="mail">
+        </a></hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories">
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://anotc.taobao.com" target="_blank">
+                <i class="icon icon-lg icon-cart-plus"></i>
+                匿名淘宝
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.anotc.com" target="_blank">
+                <i class="icon icon-lg icon-star"></i>
+                匿名官网
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">匿名数传使用方法分享</div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">匿名数传使用方法分享</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-11-11T10:42:27.000Z" itemprop="datePublished" class="page-time">
+  2018-11-11
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/匿名产品/">匿名产品</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#欢迎使用匿名数传模块"><span class="post-toc-number">1.</span> <span class="post-toc-text">欢迎使用匿名数传模块</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#匿名数传的特点"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">匿名数传的特点</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#硬件介绍"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">硬件介绍</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用介绍"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">使用介绍</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#指示灯"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">指示灯</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#连接匿名飞控"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">连接匿名飞控</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#建议"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">建议</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-jiaochengshuchuan" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">匿名数传使用方法分享</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-11-11 18:42:27" datetime="2018-11-11T10:42:27.000Z" itemprop="datePublished">2018-11-11</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/匿名产品/">匿名产品</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="欢迎使用匿名数传模块"><a href="#欢迎使用匿名数传模块" class="headerlink" title="欢迎使用匿名数传模块"></a>欢迎使用匿名数传模块</h1><p>大家调试各种设备时，一般用什么方式呢？相比答案大多是上位机+串口的方式。如果您还在使用usb转串口芯片然后连接单片机串口这样的方法，就必须拖一根串口线在下位机模块和电脑之间，十分不便。<br>匿名数传，就是为了解决这样的痛点，将有线变无线，使调试过程更加惬意和方便。</p>
+<h2 id="匿名数传的特点"><a href="#匿名数传的特点" class="headerlink" title="匿名数传的特点"></a>匿名数传的特点</h2><ol>
+<li><strong><code>简单</code></strong> ，您拿到匿名数传后，只需要通过模块usb接口连接电脑，进行简单配置后，即可使用；</li>
+<li><strong><code>高速</code></strong> ，匿名数传使用NRF24L01通信方案，最高配置为2M空中波特率，串口更是支持上M波特率，对于十六进制型的调试数据传输只是一瞬间；</li>
+<li><strong><code>双向</code></strong> ，普通无线数传一般都是单向模式，一收一发，匿名数传使用NRF芯片的Ack With Payload模式，可以实现数据双向通信；</li>
+<li><strong><code>多套同时使用</code></strong>，匿名数传可以通过配套上位机，方便的修改模块的地址、工作信道、重发次数等参数，可实现最多120套匿名数传模块同一空间同时使用。</li>
+<li><strong><code>信号强</code></strong>，模块配置有功放模块，并使用成品巴伦和匹配芯片，信号强，通信稳定。</li>
+</ol>
+<h2 id="硬件介绍"><a href="#硬件介绍" class="headerlink" title="硬件介绍"></a>硬件介绍</h2><p>先来看看匿名数传的样子吧。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/jiaochengshuchuan.html/模块正面.jpg" alt="匿名数传正面" title="">
+                </div>
+                <div class="image-caption">匿名数传正面</div>
+            </figure><br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/jiaochengshuchuan.html/模块背面.jpg" alt="匿名数传背面" title="">
+                </div>
+                <div class="image-caption">匿名数传背面</div>
+            </figure></p>
+<ol>
+<li>正面很简单，一个USB接口，用来连接电脑，旁边是4p的串口插座，使用sh1.0的线材。再旁边是一个小按键，用来进入配置模式。<br>天线插座左边有一个RGB灯，用来指示模块的工作状态，右边有一个电源指示灯。</li>
+<li>我们再来看背面，背面我们就主要介绍串口的丝印：TRGV，什么意思呢？<br>T：TX，数传的TX，接下位机的RX<br>R：RX，数传的RX，接下位机的TX<br>G：GND<br>V：VCC，5V供电</li>
+</ol>
+<h2 id="使用介绍"><a href="#使用介绍" class="headerlink" title="使用介绍"></a>使用介绍</h2><p>那么拿到我们的匿名数传后，如何使用呢，请跟随我的脚步，简单几个步骤，即可熟练使用。</p>
+<ol>
+<li><strong><code>连接上位机</code></strong> 首先模块通过usb连接上位机，一定要连接购买模块时发送给您的配套上位机，只有对应版本的上位机才能正确配置哦。通过usb连接到电脑后，上位机选择hid模式，点击搜索按钮，如果能正确搜索到设备名为匿名数传的设备，表示连接正常，搜不到的话请更换usb线尝试，很多usb线只能充电不能传输数据哦。<br>然后打开上位机的数据连接，打开数传配置界面，如下图：<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/jiaochengshuchuan.html/主界面.png" alt="这里打开" title="">
+                </div>
+                <div class="image-caption">这里打开</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/jiaochengshuchuan.html/配置界面.png" alt="配置界面" title="">
+                </div>
+                <div class="image-caption">配置界面</div>
+            </figure></li>
+<li><strong><code>工作模式配置</code></strong> 一共两个工作模式，用户根据自己的使用情况进行分配，发送数据量大的一端，使用主发送模式，另一个模块使用主接收模式，一对数传必须分别配置为两个模式哦。<br>ps.如何看模块运行于哪个模式呢，其实在模块上电开机时，RGB灯会闪烁，如果是绿灯闪烁，则代表本模块是主发送模式，如果是蓝灯闪烁，则代表本模块是主接收模式。</li>
+<li><strong><code>普通用户</code></strong> 其实普通用户，  配置完工作模式，后面就不用看啦，直接用默认配置就行了，所以说很简单啦，那么有特殊需求的用户呢，接着往下看吧。</li>
+<li><strong><code>空中速率</code></strong> 指NRF芯片的空中速率，速率越高，吞吐量越大，通信越快，通信距离越短，室内调试用推荐最大2M，室外需要远距离了，可以配置为250K，但是请注意减少通信数据了，以防数据溢出。</li>
+<li><strong><code>模块地址</code></strong> 正常情况下，本处无需修改，即使您需要多套匿名数传同时使用，修改下面的无线信道即可，那么修改本处有什么用呢，能想到的就是加密了。。。地址分3字节，256<em>256</em>256个可能性，您随意配置一个，别人即使知道用的NRF，不知道你的地址，也无法读取到数据。注意，收发地址必须配置为一样的哦。</li>
+<li><strong><code>无线信道</code></strong> 这个配置很重要，首先一对模块必须配置成一样的信道才能通信；当您有多对数传同时使用时，可以合理分配信道值，最多125套数传同时使用。</li>
+<li><strong><code>重发次数</code></strong> 模块使用NRF芯片的底层协议，设置好重发次数后，如果某帧数据没有发送成本，模块会进行重发，这个重发操作无需用户参与，模块自动完成，推荐用默认值15.</li>
+<li><strong><code>串口设置</code></strong> 波特率，这个大家一定要注意，这里的波特率一定要和您单片机连接数传的串口波特率相同哦。电脑端模块可以取消勾选使能串口，但是接单片机的模块一定记得勾选使能串口哦。</li>
+<li><strong><code>最后最后最后</code></strong> 最后，别忘了将配置写进模块哦，不写进模块配置是无法生效的哦。如何写入呢？点击上位机界面最下面的写入模块设置按钮啊！啊？灰的，点不了啊。额。。。为了避免粗心用户随便更改配置并写进模块，这里做了个判断，只有当正确读取到模块配置之后，才能点击写入按钮哦。好了，没有最后了。开始使用吧！ </li>
+</ol>
+<h2 id="指示灯"><a href="#指示灯" class="headerlink" title="指示灯"></a>指示灯</h2><ol>
+<li>开机时，RGB指示灯闪烁，颜色代表本模块的工作模式，绿色代表主发送模式，蓝色代表主接收模式。</li>
+<li>当成功发送一帧数据后，发送端会闪绿色。</li>
+<li>当成功接收一帧数据后，接收端会闪蓝色。</li>
+</ol>
+<h2 id="连接匿名飞控"><a href="#连接匿名飞控" class="headerlink" title="连接匿名飞控"></a>连接匿名飞控</h2><p>匿名数传+匿名飞控，开始您最惬意的使用体验吧。<br>匿名数传和匿名拓空者Pro的接口是对应设计的，只需要使用我们赠送的4p串口线，连接数传的串口至匿名拓空者Pro飞控的串口2，使用默认的飞控源码，即可实现无线调参、状态监视等功能啦！ </p>
+<h2 id="建议"><a href="#建议" class="headerlink" title="建议"></a>建议</h2><ol>
+<li>匿名数传通信够快，大家不必再使用9600、115200这样的波特率了，我们默认配置为500000的串口波特率哦，并且配合2M的空中波特率，通信速度杠杠的。</li>
+<li>当您的使用环境有多对匿名数传时，记得将无线信道改为不同值哦，要不然你的模块就会收到别人的数据啦，通信就乱了。</li>
+<li>如果想达到公里级通信距离，可以自行更换更大增益的天线，模块使用标准sma接头，购买内螺内针的天线即可。</li>
+</ol>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-11-11T09:35:10.490Z" itemprop="dateUpdated">2018-11-11 17:35:10</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://www.digiwang.com">
+            <img src="/img/digiwang.jpg" alt="茶不思">
+            茶不思
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/匿名数传/">匿名数传</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.digiwang.com/jiaochengshuchuan.html/&title=《匿名数传使用方法分享》 — 匿名科创 ANO TC&pic=http://www.digiwang.com/img/digiwang.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.digiwang.com/jiaochengshuchuan.html/&title=《匿名数传使用方法分享》 — 匿名科创 ANO TC&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.digiwang.com/jiaochengshuchuan.html/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《匿名数传使用方法分享》 — 匿名科创 ANO TC&url=http://www.digiwang.com/jiaochengshuchuan.html/&via=http://www.digiwang.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.digiwang.com/jiaochengshuchuan.html/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/zatansbus.html/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">飞控杂谈-SBUS通信</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "tpFylRNtR7NVLVIhmxhUMfjL-gzGzoHsz",
+            appKey: "0vL8AmdoGyPIqXrFSUAKdSev",
+            avatar: "mm",
+            placeholder: "说点什么吧",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "5"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>茶不思 &copy; 2012 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.digiwang.com/jiaochengshuchuan.html/&title=《匿名数传使用方法分享》 — 匿名科创 ANO TC&pic=http://www.digiwang.com/img/digiwang.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.digiwang.com/jiaochengshuchuan.html/&title=《匿名数传使用方法分享》 — 匿名科创 ANO TC&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.digiwang.com/jiaochengshuchuan.html/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《匿名数传使用方法分享》 — 匿名科创 ANO TC&url=http://www.digiwang.com/jiaochengshuchuan.html/&via=http://www.digiwang.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.digiwang.com/jiaochengshuchuan.html/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://www.digiwang.com/jiaochengshuchuan.html/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '匿名科创';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '匿名科创';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
